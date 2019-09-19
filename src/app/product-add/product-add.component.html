@@ -2,29 +2,29 @@
         <div class="card-body">
           <form [formGroup]="angForms" novalidate>
             <div class="form-group">
-              <label class="col-md-4">Product Name</label>
+              <label class="col-md-4">Nom du Produit</label>
               <input type="text" class="form-control" 
                 formControlName="ProductName" 
                 #ProductName />
             </div>
             <div *ngIf="angForms.controls['ProductName'].invalid && (angForms.controls['ProductName'].dirty || angForms.controls['ProductName'].touched)" class="alert alert-danger">
               <div *ngIf="angForms.controls['ProductName'].errors.required">
-                Product Name is required.
+                Le nom du Produit est <b>obligatoire</b> 
               </div>
             </div>
             <div class="form-group">
-              <label class="col-md-4">Product Description </label>
+              <label class="col-md-4">Description du Produit </label>
               <textarea class="form-control" rows = 7 cols = "5"
               formControlName="ProductDescription" 
               #ProductDescription></textarea>
             </div>
             <div *ngIf="angForms.controls['ProductDescription'].invalid && (angForms.controls['ProductDescription'].dirty || angForms.controls['ProductDescription'].touched)" class="alert alert-danger">
               <div *ngIf="angForms.controls['ProductDescription'].errors.required">
-                Product Description is required.
+                La description du Produit est <b>obligatoire</b> 
               </div>
             </div>
             <div class="form-group">
-              <label class="col-md-4">Product Price</label>
+              <label class="col-md-4">Prix du Produit</label>
               <input type="text" class="form-control" 
                 formControlName="ProductPrice" 
                 #ProductPrice
@@ -32,13 +32,13 @@
             </div>
             <div *ngIf="angForms.controls['ProductPrice'].invalid && (angForms.controls['ProductPrice'].dirty || angForms.controls['ProductPrice'].touched)" class="alert alert-danger">
               <div *ngIf="angForms.controls['ProductPrice'].errors.required">
-                Product Price is required.
+                Le prix du Produit est <b>obligatoire</b> 
               </div>
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-primary"
               [disabled]="angForms.pristine || angForms.invalid" >
-                Create Product
+                Créer le Produit
               </button>
             </div>
           </form>
